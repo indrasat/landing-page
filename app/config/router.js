@@ -8,6 +8,7 @@ import Checkout from "../screen/Checkout";
 import colors from "./colors";
 import QCar from '../screen/QCar';
 import AddressDetail from '../screen/AddressDetail';
+import MyRequest from "../screen/MyRequest";
 
 
 export const QServedStack = StackNavigator({
@@ -46,6 +47,12 @@ export const QServedStack = StackNavigator({
         navigationOptions: ({navigation}) => ({
             title: 'Address Detail'
         })
-    }
+    },
+    MyRequest: {
+        screen: MyRequest,
+        navigationOptions: ({navigation}) => ({
+            title: 'My Request'
+        })
+    },
 })
 

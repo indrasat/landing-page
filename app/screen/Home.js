@@ -26,6 +26,10 @@ class Home extends Component{
         });
     }
 
+    goMyRequest(){
+        this.props.navigation({routeName: 'MyRequest'});
+    }
+
     goQFood(){
         this.props.navigation({routeName: 'QFood'});
     }
@@ -95,7 +99,7 @@ class Home extends Component{
                         <NotificationList />
                     </Content>
                     <Footer style={styles.footerTransparent}>
-                        <MyFooterTab/>
+                        <MyFooterTab goMyRequest={this.goMyRequest()}/>
                     </Footer>
                 </ImageBackground>
                 <ActionButton icon={
