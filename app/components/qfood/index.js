@@ -3,6 +3,7 @@ import MyChartFooter from './MyChartFooter';
 import QtyPicker from './QtyPicker';
 import QuantityInout from './QuantityInput';
 import CheckoutList from './CheckoutList';
+import QFoodRequest from './QFoodRequest';
 
 export{
     styles,
@@ -12,4 +13,5 @@ export{
     QtyPicker,
     QuantityInout,
     CheckoutList,
+    QFoodRequest,
 }

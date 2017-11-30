@@ -1,18 +1,21 @@
-import React from 'react';
+import React, {Component} from 'react';
 const { FooterTab, Button, Text }  = require('native-base');
 import {TouchableOpacity} from 'react-native';
 import Icon from 'react-native-vector-icons/Ionicons';
 import styles from './styles';
 
-const Menu = ({icon, label, active = false, onPress}) =>{
-    return(
-        <TouchableOpacity onPress={() => onPress}>
-            <Button vertical style={styles.buttonTab}>
-                <Icon name={icon} style={[styles.footerTabIcon, active?styles.footerTabIconActive:undefined]}/>
-                <Text style={[styles.footerLabel, active?styles.footerLabelActive:undefined]}>{label}</Text>
-            </Button>
-        </TouchableOpacity>
-    )
-}
+export default class Menu extends Component {
+    constructor(props){
+        super(props);
+    }
 
-export default Menu;
+    render(){
+
+        return(
+            <Button vertical style={styles.buttonTab} onPress={this.props.doPress}>
+                <Icon name={this.props.icon} style={[styles.footerTabIcon, this.props.active?styles.footerTabIconActive:undefined]}/>
+                <Text style={[styles.footerLabel, this.props.active?styles.footerLabelActive:undefined]}>{this.props.label}</Text>
+            </Button>
+        );
+    }
+}

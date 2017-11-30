@@ -30,6 +30,10 @@ class Home extends Component{
         this.props.navigation({routeName: 'MyRequest'});
     }
 
+    goHome(){
+        this.props.navigation({routeName: 'Home'});
+    }
+
     goQFood(){
         this.props.navigation({routeName: 'QFood'});
     }
@@ -99,7 +103,7 @@ class Home extends Component{
                         <NotificationList />
                     </Content>
                     <Footer style={styles.footerTransparent}>
-                        <MyFooterTab goMyRequest={this.goMyRequest()}/>
+                        <MyFooterTab goMyRequest={() => this.goMyRequest.bind(this)} goHome={() => this.goHome.bind(this)}/>
                     </Footer>
                 </ImageBackground>
                 <ActionButton icon={

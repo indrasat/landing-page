@@ -9,6 +9,7 @@ import colors from "./colors";
 import QCar from '../screen/QCar';
 import AddressDetail from '../screen/AddressDetail';
 import MyRequest from "../screen/MyRequest";
+import QFoodRequest from "../components/qfood/QFoodRequest";
 
 
 export const QServedStack = StackNavigator({
@@ -50,6 +51,12 @@ export const QServedStack = StackNavigator({
     },
     MyRequest: {
         screen: MyRequest,
+        navigationOptions: ({navigation}) => ({
+            title: 'My Request'
+        })
+    },
+    QFoodRequest: {
+        screen: QFoodRequest,
         navigationOptions: ({navigation}) => ({
             title: 'My Request'
         })
